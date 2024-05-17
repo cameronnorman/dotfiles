@@ -9,8 +9,6 @@ function M.config()
 	local llm = require("llm")
 
 	llm.setup({
-		-- api_token = "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", -- cf Install paragraph
-		-- model = "codellama/CodeLlama-13b-hf",
 		model = "starcoder2:3b",
 		url = "http://localhost:11434/api/generate",
 		backend = "ollama",
