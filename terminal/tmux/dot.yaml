@@ -1,0 +1,7 @@
+---
+global:
+  installs: false
+
+darwin:
+  links:
+    .tmux.conf: ~/.tmux.conf
