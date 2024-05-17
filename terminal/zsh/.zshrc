@@ -103,6 +103,7 @@ alias cat="bat"
 alias dig="dog"
 alias wttr="curl wttr.in"
 alias fzf="fzf --preview 'bat --color=always --style=numbers --line-range=:500 {}'"
+alias v="nvim"
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
 eval "$(direnv hook zsh)"
