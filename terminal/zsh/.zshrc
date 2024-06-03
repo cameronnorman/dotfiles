@@ -68,7 +68,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git ruby rails golang rake-fast)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -106,12 +106,16 @@ alias fzf="fzf --preview 'bat --color=always --style=numbers --line-range=:500 {
 alias v="nvim"
 alias lg="lazygit"
 alias la="lazyaptible"
+alias diff="diff2html -s side"
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
 eval "$(direnv hook zsh)"
 eval "$(zoxide init zsh)"
 
+task
+
 source /Users/cameron.norman/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $HOME/.cargo/env
 
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
 elif [[ "$OSTYPE" == "darwin"* ]]; then
@@ -127,8 +131,12 @@ function prev() {
 
 # Set PATH, MANPATH, etc., for Homebrew.
 # Add Visual Studio Code (code)
+export LC_ALL=en_US.UTF-8
+export LC_CTYPE=en_US.UTF-8
+
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 export ROTZ_INSTALL="/Users/cameron.norman/.rotz"
 export PATH="$ROTZ_INSTALL/bin:$PATH"
 export LAZYAPTIBLE_INSTALL="/Users/cameron.norman/sandbox/lazyaptible"
 export PATH="$LAZYAPTIBLE_INSTALL/bin:$PATH"
+. "$HOME/.cargo/env"

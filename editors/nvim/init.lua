@@ -1,13 +1,16 @@
 require("user.launch")
 require("user.options")
 require("user.keymaps")
+--
 -- Themes
 -- spec "user.darkplus"
 -- spec "user.nightfox"
-spec("user.catppuccin")
+-- spec("user.catppuccin")
 -- spec("user.gruvbox")
-spec("user.github-nvim-theme")
+-- spec("user.github-nvim-theme")
+spec("user.rose-pine")
 -- Themes
+--
 spec("user.devicons")
 spec("user.treesitter")
 spec("user.mason")
